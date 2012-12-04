@@ -27,3 +27,12 @@ Now add to the *head* tag in your layout(s):
 ```ruby
 <%= bugherd_tag %>
 ```
+
+## Meta data
+
+BugHerd allows you to pass in extra data which will be added as metadata to any bug your users may log on the page where the widget is rendered.
+
+```ruby
+<%= bugherd_tag :metadata => { :user_id => current_user.id.to_s, :rails_page => "#{controller.controller_name}\##{controller.action_name}" } %>
+```
+
