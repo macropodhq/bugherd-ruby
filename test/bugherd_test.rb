@@ -13,6 +13,6 @@ class BugHerdTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_select 'title', 'Dummy'
-    assert_select 'head', /chicker/
+    assert_select 'head', /chicken/
   end
 end
