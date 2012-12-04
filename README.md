@@ -22,8 +22,8 @@ end
 
 You can obtain the project key from your project's installation options in BugHerd.
 
-Now add to the <head> tag in your layout(s):
+Now add to the *head* tag in your layout(s):
 
-```ruby
+```html
 <%= bugherd_tag %>
 ```
