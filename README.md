@@ -1,6 +1,6 @@
 # BugHerd gem
 
-Add the BugHerd widget to your Rails site.
+Add the BugHerd widget to your Rails site. [Get a BugHerd account](http://www.bugherd.com/).
 
 ## Installation
 
