@@ -24,6 +24,6 @@ You can obtain the project key from your project's installation options in BugHe
 
 Now add to the *head* tag in your layout(s):
 
-```html
+```ruby
 <%= bugherd_tag %>
 ```
