@@ -35,5 +35,29 @@ Now add to the *head* tag in your layout(s):
 BugHerd allows you to pass in extra data which will be added as metadata to any bug your users may log on the page where the widget is rendered.
 
 ```ruby
-<%= bugherd_tag :metadata => { :user_id => current_user.id.to_s, :controller => controller.controller_name } %>
+<%= bugherd_tag :metadata => {
+  :user_id => current_user.id.to_s,
+  :controller => controller.controller_name
+} %>
+```
+
+## Translation
+
+If you are using the public "Send Feedback" option on your project, you can customise the display text:
+
+```ruby
+<%= bugherd_tag :feedback => {
+  :tab_text => "Stuur commentaar",
+  :option_title_text => "Kies een optie",
+  :option_pin_text => "Ik wil graag iets op deze pagina aanwijzen.",
+  :option_site_text => "Ik heb commentaar over deze pagina in z'n geheel.",
+  :feedback_entry_placeholder => "schrijf hier uw commentaar",
+  :feedback_email_placeholder => "uw email adres",
+  :feedback_submit_text => "verstuur commentaar",
+  :confirm_success_text => "Commentaar is verstuurd.",
+  :confirm_loading_text => "Commentaar wordt verstuurd...",
+  :confirm_close_text => "sluiten",
+  :confirm_error_text => "Er is een fout opgetreden en commentaar kon niet verstuurd worden.",
+  :confirm_retry_text => "Probeer opnieuw",
+} %>
 ```
