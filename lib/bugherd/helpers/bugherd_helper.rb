@@ -5,16 +5,6 @@ module BugHerdHelper
     if options[:turbolinks]
       javascript_tag "
         var BugHerdConfig = #{options.to_json};
-        (function (d, t) {
-          var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
-          bh.type = 'text/javascript';
-          bh.src = '//www.bugherd.com/sidebarv2.js?apikey=#{key}';
-          s.parentNode.insertBefore(bh, s);
-        })(document, 'script');
-      "
-    else
-      javascript_tag "
-        var BugHerdConfig = #{options.to_json};
         $(function() {
           if (window._bugHerd) {
             window._bugHerd.loadingComplete = false;
@@ -26,6 +16,16 @@ module BugHerdHelper
             s.parentNode.insertBefore(bh, s);
           })(document, 'script');
         });
+      "
+    else
+      javascript_tag "
+        var BugHerdConfig = #{options.to_json};
+        (function (d, t) {
+          var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          bh.type = 'text/javascript';
+          bh.src = '//www.bugherd.com/sidebarv2.js?apikey=#{key}';
+          s.parentNode.insertBefore(bh, s);
+        })(document, 'script');
       "
     end
   end
