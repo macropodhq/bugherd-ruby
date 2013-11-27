@@ -2,7 +2,7 @@ module BugHerdHelper
 
   def bugherd_tag(options = {})
     key = ENV['BUGHERD_PROJECT_KEY'] || BugHerd.configuration.project_key
-    if options[:turbolinks]
+    if options['turbolinks']
       javascript_tag "
         var BugHerdConfig = #{options.to_json};
         $(function() {
