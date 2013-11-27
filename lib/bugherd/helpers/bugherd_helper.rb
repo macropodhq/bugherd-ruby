@@ -16,7 +16,7 @@ module BugHerdHelper
   def bugherd_turbolink_tag(options = {})
     key = ENV['BUGHERD_PROJECT_KEY'] || BugHerd.configuration.project_key
     javascript_tag "
-    var BugHerdConfig = #{options.to_json};
+      var BugHerdConfig = #{options.to_json};
       $(function() {
         if (window._bugHerd) {
           window._bugHerd.loadingComplete = false;
