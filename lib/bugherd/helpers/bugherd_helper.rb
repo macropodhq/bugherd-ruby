@@ -13,7 +13,7 @@ module BugHerdHelper
     "
   end
 
-  def bugherd_turbolink_tag(options = {})
+  def bugherd_turbolinks_tag(options = {})
     key = ENV['BUGHERD_PROJECT_KEY'] || BugHerd.configuration.project_key
     javascript_tag "
       var BugHerdConfig = #{options.to_json};
